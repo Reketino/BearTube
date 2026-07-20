@@ -8,9 +8,10 @@ Built with React, TypeScript, Vite, and the Chrome Extension Manifest V3 API.
 
 ## Features
 
-- Hide Shorts from YouTube
+- Hide Shorts across YouTube
 - Hide the Shorts shelf from the YouTube home feed
 - Hide Shorts notifications
+- Hide Shorts shelves from YouTube search results
 - Enable or disable filters from the extension popup
 - Settings are synchronized using Chrome Storage
 - Automatically filters dynamically loaded YouTube content
@@ -40,6 +41,7 @@ BearTube Filters
     ├── Shorts
     ├── Shorts Feed
     └── Shorts Notifications
+    └── Shorts Search
 ```
 
 Settings are controlled through the React popup and stored using `chrome.storage.sync`.
@@ -52,6 +54,7 @@ src/
 │   ├── filters/
 │   │   ├── index.ts
 │   │   ├── notifications.ts
+│   │   ├── search.ts
 │   │   ├── shelf.ts
 │   │   └── shorts.ts
 │   ├── index.ts
@@ -98,13 +101,13 @@ After making changes, rebuild the extension and reload it from the Extensions pa
 
 ## Roadmap
 
-- [x] Hide Shorts
+- [x] Hide Shorts across YouTube
 - [x] Hide Shorts feed
 - [x] Hide Shorts notifications
 - [x] Configurable filters
 - [x] Persistent settings
-- [ ] Hide Shorts from search results
-- [ ] Hide Shorts from recommendations
+- [ ] Hide Shorts sidebar navigation
+- [ ] Block direct Shorts navigation
 - [ ] Improve popup UI
 - [ ] Add BearTube branding and logo
 

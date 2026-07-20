@@ -14,7 +14,8 @@ async function initialize() {
   const hasActiveFilters =
     settings.hideShorts ||
     settings.hideShortsFeed ||
-    settings.hideShortsNotifications;
+    settings.hideShortsNotifications ||
+    settings.hideShortsSearch;
 
   if (hasActiveFilters) {
     startObserver();

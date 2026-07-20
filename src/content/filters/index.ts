@@ -1,6 +1,7 @@
 import { filterShorts } from "./shorts";
 import { filterNotifications } from "./notifications";
 import { filterShelf } from "./shelf";
+import { filterSearch } from "./search";
 
 import type { BearTubeSettings } from "../../types/settings";
 
@@ -15,5 +16,9 @@ export function runFilters(settings: BearTubeSettings) {
 
     if (settings.hideShortsNotifications) {
         filterNotifications();
+    }
+
+    if (settings.hideShortsSearch) {
+        filterSearch();
     }
 }

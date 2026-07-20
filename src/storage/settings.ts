@@ -4,6 +4,7 @@ import type { BearTubeSettings } from "../types/settings";
     hideShorts: true,
     hideShortsFeed: true,
     hideShortsNotifications: true,
+    hideShortsSearch: true,
 } satisfies BearTubeSettings;
 
 export async function getSettings(): Promise<BearTubeSettings> {
@@ -13,6 +14,7 @@ export async function getSettings(): Promise<BearTubeSettings> {
         hideShorts: settings.hideShorts as boolean,
         hideShortsFeed: settings.hideShortsFeed as boolean,
         hideShortsNotifications: settings.hideShortsNotifications as boolean,
+        hideShortsSearch: settings.hideShortsSearch as boolean,
     };
 }
 

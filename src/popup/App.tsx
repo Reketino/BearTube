@@ -53,6 +53,17 @@ export default function App() {
           } 
            />
           <span>Hide Shorts Notifications</span>
+          </label>
+
+             <label className="toggle">
+             <input 
+          type="checkbox"
+          checked={settings.hideShortsSearch}
+          onChange={(event) => 
+            update("hideShortsSearch", event.target.checked)
+          } 
+           />
+          <span>Hide Shorts Search</span>
         </label>
          </section>
 

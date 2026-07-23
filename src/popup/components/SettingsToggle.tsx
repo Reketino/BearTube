@@ -15,7 +15,7 @@ export function SettingsToggle({
         <label className="setting-toggle">
             <span className="setting-content">
                 <span className="setting-title">{title}</span>
-                <span className="setting-">{description}</span>
+                <span className="setting-description">{description}</span>
             </span>
 
             <input

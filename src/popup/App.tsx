@@ -9,7 +9,7 @@ export default function App() {
   if (!settings) {
     return (
       <main className="app">
-      <p>Loading settings...</p> 
+        <p>Loading settings...</p>
       </main>
     );
   }
@@ -22,11 +22,11 @@ export default function App() {
           <span className="brand-icon" aria-hidden="true">
             🐻
           </span>
-        
-        <div>
-        <h1>BearTube</h1>
-        <p>Hide shorts. Keep Uploads.</p>
-        </div>
+
+          <div>
+            <h1>BearTube</h1>
+            <p>Hide shorts. Keep Uploads.</p>
+          </div>
         </div>
 
         <span className="version">v0.1</span>
@@ -35,46 +35,45 @@ export default function App() {
       <section className="section">
         <h2>Content filters</h2>
 
-        <div  className="settings">
+        <div className="settings">
           <SettingsToggle
-          title="Hide Shorts"
-          description="Remove Shorts content across Youtube"
-          checked={settings.hideShorts}
-          onChange={(checked) => update("hideShorts", checked)}
+            title="Hide Shorts"
+            description="Remove Shorts content across Youtube"
+            checked={settings.hideShorts}
+            onChange={(checked) => update("hideShorts", checked)}
           />
 
           <SettingsToggle
-          title="Hide Shorts Feed"
-          description="Remove the Shorts shelf from your home feed"
-          checked={settings.hideShortsFeed}
-          onChange={(checked) => update("hideShortsFeed", checked)}
+            title="Hide Shorts Feed"
+            description="Remove the Shorts shelf from your home feed"
+            checked={settings.hideShortsFeed}
+            onChange={(checked) => update("hideShortsFeed", checked)}
           />
 
           <SettingsToggle
-          title="Hide Shorts Search"
-          description="Remove Shorts shelves from search result"
-          checked={settings.hideShortsSearch}
-          onChange={(checked) => update("hideShortsSearch", checked)}
+            title="Hide Shorts Search"
+            description="Remove Shorts shelves from search result"
+            checked={settings.hideShortsSearch}
+            onChange={(checked) => update("hideShortsSearch", checked)}
           />
 
           <SettingsToggle
-          title="Hide Shorts Notifications"
-          description="Remove notifications linking to Shorts"
-          checked={settings.hideShortsNotifications}
-          onChange={(checked) => update("hideShortsNotifications", checked)}
+            title="Hide Shorts Notifications"
+            description="Remove notifications linking to Shorts"
+            checked={settings.hideShortsNotifications}
+            onChange={(checked) => update("hideShortsNotifications", checked)}
           />
         </div>
-         </section>
+      </section>
 
-        <footer className="footer">
-          <span className="status">
-            <span className="status-dot" aria-hidden="true" />
-            {activeFilters} {activeFilters === 1 ? "filter" : "filters"} active
-          </span>
-          
-          <span>BearTube v0.1.0</span>
-          </footer>
-     
+      <footer className="footer">
+        <span className="status">
+          <span className="status-dot" aria-hidden="true" />
+          {activeFilters} {activeFilters === 1 ? "filter" : "filters"} active
+        </span>
+
+        <span>BearTube v0.1.0</span>
+      </footer>
     </main>
   );
 }

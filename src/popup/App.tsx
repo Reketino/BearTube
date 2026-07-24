@@ -68,7 +68,10 @@ export default function App() {
 
       <footer className="footer">
         <span className="status">
-          <span className="status-dot" aria-hidden="true" />
+          <span 
+          className={`status-dot ${activeFilters === 0 ? "inactive" : ""}`}
+          aria-hidden="true" 
+          />
           {activeFilters} {activeFilters === 1 ? "filter" : "filters"} active
         </span>
 

@@ -5,6 +5,7 @@ import type { BearTubeSettings } from "../types/settings";
     hideShortsFeed: true,
     hideShortsNotifications: true,
     hideShortsSearch: true,
+    hideShortsSidebar: true,
 } satisfies BearTubeSettings;
 
 export async function getSettings(): Promise<BearTubeSettings> {
@@ -15,6 +16,7 @@ export async function getSettings(): Promise<BearTubeSettings> {
         hideShortsFeed: settings.hideShortsFeed as boolean,
         hideShortsNotifications: settings.hideShortsNotifications as boolean,
         hideShortsSearch: settings.hideShortsSearch as boolean,
+        hideShortsSidebar: settings.hideShortsSidebar as boolean,
     };
 }
 
@@ -31,5 +33,5 @@ export async function updateSettings(
 }
 
 export async function resetSettings(): Promise<void> {
-    await chrome.storage.sync.set(DEFAULT_SETTINGS)
+    await chrome.storage.sync.set(DEFAULT_SETTINGS);
 }

@@ -15,7 +15,8 @@ export function initializeStorageListener() {
         settings.hideShorts ||
         settings.hideShortsFeed ||
         settings.hideShortsNotifications ||
-        settings.hideShortsSearch;
+        settings.hideShortsSearch ||
+        settings.hideShortsSidebar
 
         if (hasActiveFilters) {
             startObserver();

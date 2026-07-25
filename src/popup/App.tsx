@@ -58,6 +58,13 @@ export default function App() {
           />
 
           <SettingsToggle
+            title="Hide Shorts Sidebar"
+            description="Remove Shorts link from the Youtube sidebar"
+            checked={settings.hideShortsSidebar}
+            onChange={(checked) => update("hideShortsSidebar", checked)}
+          />
+
+          <SettingsToggle
             title="Hide Shorts Notifications"
             description="Remove notifications linking to Shorts"
             checked={settings.hideShortsNotifications}
@@ -68,9 +75,9 @@ export default function App() {
 
       <footer className="footer">
         <span className="status">
-          <span 
-          className={`status-dot ${activeFilters === 0 ? "inactive" : ""}`}
-          aria-hidden="true" 
+          <span
+            className={`status-dot ${activeFilters === 0 ? "inactive" : ""}`}
+            aria-hidden="true"
           />
           {activeFilters} {activeFilters === 1 ? "filter" : "filters"} active
         </span>

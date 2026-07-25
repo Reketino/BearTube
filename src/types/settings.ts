@@ -3,4 +3,5 @@ export interface BearTubeSettings {
     hideShortsFeed: boolean;
     hideShortsNotifications: boolean;
     hideShortsSearch: boolean;
+    hideShortsSidebar: boolean;
 }

@@ -3,6 +3,7 @@ import { startObserver } from "./observer";
 import { initializeStorageListener } from "./storageListener";
 import { debug } from "../utils/debug";
 
+
 async function initialize() {
   debug("🐻 BearTube initializing");
 
@@ -15,7 +16,8 @@ async function initialize() {
     settings.hideShorts ||
     settings.hideShortsFeed ||
     settings.hideShortsNotifications ||
-    settings.hideShortsSearch;
+    settings.hideShortsSearch ||
+    settings.hideShortsSidebar
 
   if (hasActiveFilters) {
     startObserver();

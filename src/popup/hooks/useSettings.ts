@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import {
     getSettings,
     updateSettings,
+    resetSettings,
 } from "../../storage/settings";
 
 import type { BearTubeSettings } from "../../types/settings";
@@ -16,7 +17,7 @@ export function useSettings() {
             setSettings(data);
         }
 
-        loadSettings();
+        void loadSettings();
     }, []);
 
     async function update<K extends keyof BearTubeSettings>(
@@ -37,8 +38,17 @@ export function useSettings() {
       );
     }
 
+    async function reset() {
+        await resetSettings();
+
+        const data = await getSettings();
+        setSettings(data);
+        
+    }
+
     return {
         settings,
         update,
+        reset,
     };
 }

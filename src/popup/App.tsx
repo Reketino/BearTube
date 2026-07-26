@@ -4,7 +4,7 @@ import { SettingsToggle } from "./components/SettingsToggle";
 import { useSettings } from "./hooks/useSettings";
 
 export default function App() {
-  const { settings, update } = useSettings();
+  const { settings, update, reset } = useSettings();
 
   if (!settings) {
     return (
@@ -81,6 +81,14 @@ export default function App() {
           />
           {activeFilters} {activeFilters === 1 ? "filter" : "filters"} active
         </span>
+
+        <button 
+        className="reset-button"
+        type="button"
+        onClick={() => void reset()}
+        >
+          Reset
+        </button>
 
         <span>BearTube v0.1.0</span>
       </footer>

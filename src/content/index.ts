@@ -17,9 +17,9 @@ async function initialize() {
     settings.hideShortsFeed ||
     settings.hideShortsNotifications ||
     settings.hideShortsSearch ||
-    settings.hideShortsSidebar
+    settings.hideShortsSidebar;
 
-  if (hasActiveFilters) {
+  if (settings.enabled && hasActiveFilters) {
     startObserver();
   }
 }

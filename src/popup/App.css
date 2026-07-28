@@ -199,14 +199,14 @@ input {
     90deg,
     rgba(239, 68, 68, 0.06),
     rgba(24, 24, 27, 0.78) 35%
-  )
+  );
 }
 
-.reset-button {
+.reset-button:focus-visible {
   padding: 5px 9px;
   border: 1px solid #3f3f46;
   border-radius: 8px;
-  background: transparent;
+  background: #18181b;
   color: #a1a1aa;
   font-size: 10px;
   font-weight: 600;
@@ -215,6 +215,12 @@ input {
   border-color 160ms ease,
   background 160ms ease,
   color 160ms ease;
+}
+
+.reset-button:hover {
+  border-color: #52525b;
+  background: #18181b;
+  color: #f4f4f5;
 }
 
 .footer {

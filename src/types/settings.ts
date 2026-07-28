@@ -1,4 +1,5 @@
 export interface BearTubeSettings {
+    enabled: boolean;
     hideShorts: boolean;
     hideShortsFeed: boolean;
     hideShortsNotifications: boolean;

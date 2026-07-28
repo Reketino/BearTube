@@ -1,6 +1,7 @@
 import type { BearTubeSettings } from "../types/settings";
 
- export const DEFAULT_SETTINGS = {
+export const DEFAULT_SETTINGS = {
+    enabled: true,
     hideShorts: true,
     hideShortsFeed: true,
     hideShortsNotifications: true,
@@ -12,6 +13,7 @@ export async function getSettings(): Promise<BearTubeSettings> {
     const settings = await chrome.storage.sync.get(DEFAULT_SETTINGS);
 
     return {
+        enabled: settings.enabled as boolean,
         hideShorts: settings.hideShorts as boolean,
         hideShortsFeed: settings.hideShortsFeed as boolean,
         hideShortsNotifications: settings.hideShortsNotifications as boolean,

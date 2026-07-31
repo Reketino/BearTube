@@ -14,7 +14,14 @@ export default function App() {
     );
   }
 
-  const activeFilters = Object.values(settings).filter(Boolean).length;
+  const activeFilters =[ 
+    settings.hideShorts,
+    settings.hideShortsFeed,
+    settings.hideShortsNotifications,
+    settings.hideShortsSearch,
+    settings.hideShortsSidebar,
+   ].filter(Boolean).length;
+
   return (
     <main className="app">
       <header className="header">
@@ -31,6 +38,15 @@ export default function App() {
 
         <span className="version">v0.1</span>
       </header>
+
+      <section className="master-section">
+        <SettingsToggle 
+        title="BearTube Enabled"
+        description="Enable or disable all BearTube filtering"
+        checked={settings.enabled}
+        onChange={(checked) => update("enabled", checked)}
+        />
+      </section>
 
       <section className="section">
         <h2>Content filters</h2>
@@ -76,10 +92,14 @@ export default function App() {
       <footer className="footer">
         <span className="status">
           <span
-            className={`status-dot ${activeFilters === 0 ? "inactive" : ""}`}
+            className={`status-dot ${
+              !settings.enabled || activeFilters === 0 ? "inactive" : ""
+            }`}
             aria-hidden="true"
           />
-          {activeFilters} {activeFilters === 1 ? "filter" : "filters"} active
+        {settings.enabled
+         ? `${activeFilters} ${activeFilters === 1 ? "filter" : "filters"} active`
+         : "BearTube disabled"}
         </span>
 
         <button 

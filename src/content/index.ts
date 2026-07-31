@@ -1,6 +1,7 @@
 import { getSettings } from "../storage/settings";
 import { startObserver } from "./observer";
 import { initializeStorageListener } from "./storageListener";
+import { hasActiveFilters } from "./utils/filters";
 import { debug } from "../utils/debug";
 
 
@@ -12,14 +13,7 @@ async function initialize() {
   const settings = await getSettings();
   debug(" Settings:", settings);
 
-  const hasActiveFilters =
-    settings.hideShorts ||
-    settings.hideShortsFeed ||
-    settings.hideShortsNotifications ||
-    settings.hideShortsSearch ||
-    settings.hideShortsSidebar;
-
-  if (settings.enabled && hasActiveFilters) {
+  if (settings.enabled && hasActiveFilters(settings)) {
     startObserver();
   }
 }

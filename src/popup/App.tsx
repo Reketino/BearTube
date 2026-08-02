@@ -39,15 +39,22 @@ export default function App() {
         <span className="version">v0.1</span>
       </header>
 
-      <section className="master-section">
-        <SettingsToggle 
-        title="BearTube Enabled"
-        description="Enable or disable all BearTube filtering"
-        checked={settings.enabled}
-        onChange={(checked) => update("enabled", checked)}
-        />
-      </section>
+      <div className="master-toggle">
+        <span className="master-title">BearTube Enabled</span>
 
+          <label className="master-switch"> 
+            <input
+            className="setting-input"
+            type="checkbox"
+            checked={settings.enabled}
+            onChange={(event) => update("enabled", event.target.checked)}
+            />
+
+            <span className="switch">
+              <span className="switch-thumb" />
+            </span>
+          </label>
+      </div>
       <section className="section">
         <h2>Content filters</h2>
 

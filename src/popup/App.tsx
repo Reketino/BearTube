@@ -14,13 +14,13 @@ export default function App() {
     );
   }
 
-  const activeFilters =[ 
+  const activeFilters = [
     settings.hideShorts,
     settings.hideShortsFeed,
     settings.hideShortsNotifications,
     settings.hideShortsSearch,
     settings.hideShortsSidebar,
-   ].filter(Boolean).length;
+  ].filter(Boolean).length;
 
   return (
     <main className="app">
@@ -42,18 +42,18 @@ export default function App() {
       <div className="master-toggle">
         <span className="master-title">BearTube Enabled</span>
 
-          <label className="master-switch"> 
-            <input
+        <label className="master-switch">
+          <input
             className="setting-input"
             type="checkbox"
             checked={settings.enabled}
             onChange={(event) => update("enabled", event.target.checked)}
-            />
+          />
 
-            <span className="switch">
-              <span className="switch-thumb" />
-            </span>
-          </label>
+          <span className="switch">
+            <span className="switch-thumb" />
+          </span>
+        </label>
       </div>
       <section className="section">
         <h2>Content filters</h2>
@@ -99,20 +99,19 @@ export default function App() {
       <footer className="footer">
         <span className="status">
           <span
-            className={`status-dot ${
-              !settings.enabled || activeFilters === 0 ? "inactive" : ""
-            }`}
+            className={`status-dot ${!settings.enabled || activeFilters === 0 ? "inactive" : ""
+              }`}
             aria-hidden="true"
           />
-        {settings.enabled
-         ? `${activeFilters} ${activeFilters === 1 ? "filter" : "filters"} active`
-         : "BearTube disabled"}
+          {settings.enabled
+            ? `${activeFilters} ${activeFilters === 1 ? "filter" : "filters"} active`
+            : "BearTube disabled"}
         </span>
 
-        <button 
-        className="reset-button"
-        type="button"
-        onClick={() => void reset()}
+        <button
+          className="reset-button"
+          type="button"
+          onClick={() => void reset()}
         >
           Reset
         </button>

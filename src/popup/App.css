@@ -19,7 +19,11 @@ body {
   margin: 0;
   min-width: 380px;
   background:
-    radial-gradient(circle at top left, rgba(239, 68, 68, 0.12), transparent 35%),
+    radial-gradient(
+      circle at top left,
+      rgba(239, 68, 68, 0.12),
+      transparent 35%
+    ),
     #09090b;
 }
 
@@ -215,8 +219,7 @@ input {
 
 .setting-toggle:has(.setting-input:checked) {
   border-color: rgba(239, 68, 68, 0.28);
-  background:
-  linear-gradient(
+  background: linear-gradient(
     90deg,
     rgba(239, 68, 68, 0.06),
     rgba(24, 24, 27, 0.78) 35%
@@ -232,10 +235,10 @@ input {
   font-size: 10px;
   font-weight: 600;
   cursor: pointer;
-  transition: 
-  border-color 160ms ease,
-  background 160ms ease,
-  color 160ms ease;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    color 160ms ease;
 }
 
 .reset-button:hover {

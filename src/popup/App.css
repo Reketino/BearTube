@@ -239,6 +239,8 @@ input {
     border-color 160ms ease,
     background 160ms ease,
     color 160ms ease;
+  outline: 2px solid #ef4444;
+  outline-offset: 2px;
 }
 
 .reset-button:hover {

@@ -56,9 +56,9 @@ input {
 }
 
 .master-title {
-  color: #f4f4f5;
+  color: #f8fafc;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.01em;
 }
 .master-switch {
@@ -124,6 +124,10 @@ input {
 .settings {
   display: grid;
   gap: 8px;
+}
+
+.settings.disabled {
+  opacity: 0.55;
 }
 
 .setting-toggle {

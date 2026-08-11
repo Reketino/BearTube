@@ -58,7 +58,7 @@ export default function App() {
       <section className="section">
         <h2>Content filters</h2>
 
-        <div className="settings">
+        <div className={`settings ${!settings.enabled ? "disabled" : ""}`}>
           <SettingsToggle
             title="Hide Shorts"
             description="Remove Shorts content across Youtube"

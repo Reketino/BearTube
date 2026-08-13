@@ -216,6 +216,10 @@ input {
   transform: translateX(16px);
 }
 
+.master-switch .setting_input:checked + .switch {
+  border-color: #22c55e;
+}
+
 .setting-toggle:has(.setting-input:focus-visible) {
   outline: 2px solid #ef4444;
   outline-offset: 2px;

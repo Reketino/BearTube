@@ -216,9 +216,13 @@ input {
   transform: translateX(16px);
 }
 
-.master-switch .setting_input:checked + .switch {
+.master-switch .setting-input:checked + .switch {
   border-color: #22c55e;
   background: #22c55e;
+}
+
+.master-switch .setting-input + .switch .switch-thumb {
+  background: #ffffff;
 }
 
 .setting-toggle:has(.setting-input:focus-visible) {

@@ -216,7 +216,7 @@ input {
   transform: translateX(16px);
 }
 
-.master-switch .setting-input:checked + .switch {
+.setting-input:checked + .switch .switch-thumb {
   border-color: #22c55e;
   background: #22c55e;
 }

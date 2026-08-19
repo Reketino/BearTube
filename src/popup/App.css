@@ -222,8 +222,8 @@ input {
 }
 
 .master-switch .setting-input + .switch .switch-thumb {
-  background: #ffffff;
-  transform: translateX(16px);
+  background: #22c55e;
+  transform: #22c55e;
 }
 
 .setting-toggle:has(.setting-input:focus-visible) {

@@ -1,5 +1,5 @@
 export function removeElement(element: HTMLElement | null) {
-    if (!element) return;
+  if (!element) return;
 
-    element.remove();
+  element.remove();
 }

@@ -5,4 +5,6 @@ export interface BearTubeSettings {
     hideShortsNotifications: boolean;
     hideShortsSearch: boolean;
     hideShortsSidebar: boolean;
+
+    blockAds: boolean;
 }

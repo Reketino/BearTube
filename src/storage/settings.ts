@@ -7,6 +7,8 @@ export const DEFAULT_SETTINGS = {
   hideShortsNotifications: true,
   hideShortsSearch: true,
   hideShortsSidebar: true,
+
+  blockAds: true,
 } satisfies BearTubeSettings;
 
 export async function getSettings(): Promise<BearTubeSettings> {
@@ -19,6 +21,8 @@ export async function getSettings(): Promise<BearTubeSettings> {
     hideShortsNotifications: settings.hideShortsNotifications as boolean,
     hideShortsSearch: settings.hideShortsSearch as boolean,
     hideShortsSidebar: settings.hideShortsSidebar as boolean,
+
+    blockAds: settings.blockAds as boolean,
   };
 }
 

@@ -55,10 +55,13 @@ export default function App() {
           </span>
         </label>
       </div>
+
       <section className="section">
         <h2>Content filters</h2>
 
-        <div className={`settings ${!settings.enabled ? "disabled" : ""}`}>
+        <div 
+        className={`settings ${!settings.enabled ? "disabled" : ""}`}
+        >
           <SettingsToggle
             title="Hide Shorts"
             description="Remove Shorts content across Youtube"
@@ -94,6 +97,12 @@ export default function App() {
             onChange={(checked) => update("hideShortsNotifications", checked)}
           />
         </div>
+      </section>
+
+      <section className="section">
+        <h2>Privacy & Ads</h2>
+
+        
       </section>
 
       <footer className="footer">

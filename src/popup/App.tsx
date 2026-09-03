@@ -102,7 +102,11 @@ export default function App() {
       <section className="section">
         <h2>Privacy & Ads</h2>
 
-        
+        <div
+        className={`settings ${!settings.enabled ? "disabled" : ""}`}
+        >
+          
+        </div>
       </section>
 
       <footer className="footer">

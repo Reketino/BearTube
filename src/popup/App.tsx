@@ -105,7 +105,12 @@ export default function App() {
         <div
         className={`settings ${!settings.enabled ? "disabled" : ""}`}
         >
-          
+          <SettingsToggle
+          title="Block Ads"
+          description="Block advertising requests on YouTube"
+          checked={settings.blockAds}
+          onChange={(checked) => update("blockAds", checked)}
+          />
         </div>
       </section>
 

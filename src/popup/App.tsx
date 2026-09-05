@@ -59,8 +59,8 @@ export default function App() {
       <section className="section">
         <h2>Content filters</h2>
 
-        <div 
-        className={`settings ${!settings.enabled ? "disabled" : ""}`}
+        <div
+          className={`settings ${!settings.enabled ? "disabled" : ""}`}
         >
           <SettingsToggle
             title="Hide Shorts"
@@ -103,13 +103,13 @@ export default function App() {
         <h2>Privacy & Ads</h2>
 
         <div
-        className={`settings ${!settings.enabled ? "disabled" : ""}`}
+          className={`settings ${!settings.enabled ? "disabled" : ""}`}
         >
           <SettingsToggle
-          title="Block Ads"
-          description="Block advertising requests on YouTube"
-          checked={settings.blockAds}
-          onChange={(checked) => update("blockAds", checked)}
+            title="Block Ads"
+            description="Block advertising requests on YouTube"
+            checked={settings.blockAds}
+            onChange={(checked) => update("blockAds", checked)}
           />
         </div>
       </section>

@@ -6,5 +6,5 @@ async function initialize() {
 
     const settings = await getSettings();
 
-    
+    debug("Background settings.", settings)
 }

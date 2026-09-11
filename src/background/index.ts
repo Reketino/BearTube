@@ -8,3 +8,5 @@ async function initialize() {
 
     debug("Background settings.", settings)
 }
+
+void initialize();

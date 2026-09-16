@@ -5,6 +5,13 @@ const RULESET_ID = "ads";
 
 async function updateAdBlocking(): Promise<void> {
     const settings = await getSettings();
+
+    if (settings.blockAds) {
+        await chrome.declarativeNetRequest.updateEnabledRulesets({
+            enableRulesetIds: [RULESET_ID],
+            disableRulesetIds: [],
+        })
+    }
 }
 
 async function initialize() {

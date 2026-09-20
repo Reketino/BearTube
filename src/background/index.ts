@@ -27,6 +27,8 @@ async function updateAdBlocking(): Promise<void> {
 async function initialize(): Promise<void> {
     debug("🐻 BearTube background initializing")
 
+    await updateAdBlocking();
+
     const settings = await getSettings();
 
     debug("Background settings.", settings)

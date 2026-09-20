@@ -10,12 +10,30 @@ async function updateAdBlocking(): Promise<void> {
         await chrome.declarativeNetRequest.updateEnabledRulesets({
             enableRulesetIds: [RULESET_ID],
             disableRulesetIds: [],
-        })
+        });
+
+        debug("Ad blocking enabled");
+        return;
     }
+
+    await chrome.declarativeNetRequest.updateEnabledRulesets({
+        enableRulesetIds: [],
+        disableRulesetIds: [RULESET_ID],
+    });
+
+    debug("Ad blocking disabled")
 }
 
-async function initialize() {
+async function initialize(): Promise<void> {
     debug("🐻 BearTube background initializing")
+
+    await updateAdBlocking();
+
+    chrome.storage.onChanged.addListener(async (changes, areaName)) => {
+        if (areaName !== "sync") {
+            return;
+        }
+    }
 
     const settings = await getSettings();
 

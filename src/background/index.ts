@@ -29,6 +29,12 @@ async function initialize(): Promise<void> {
 
     await updateAdBlocking();
 
+    chrome.storage.onChanged.addListener(async (changes, areaName)) => {
+        if (areaName !== "sync") {
+            return;
+        }
+    }
+
     const settings = await getSettings();
 
     debug("Background settings.", settings)

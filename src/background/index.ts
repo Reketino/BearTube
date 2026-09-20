@@ -33,6 +33,10 @@ async function initialize(): Promise<void> {
         if (areaName !== "sync") {
             return;
         }
+
+        if (!changes.blockAds) {
+            return;
+        }
     }
 
     const settings = await getSettings();

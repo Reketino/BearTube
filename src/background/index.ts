@@ -37,6 +37,8 @@ async function initialize(): Promise<void> {
         if (!changes.blockAds) {
             return;
         }
+
+        debug("Block Ads setting changed");
     }
 
     const settings = await getSettings();

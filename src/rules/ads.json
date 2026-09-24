@@ -4,6 +4,15 @@
         "priority": 1,
         "action": {
             "type": "block"
+        },
+        "condition": {
+            "urlFilter": "googleads",
+            "resourceTypes": [
+                "script",
+                "image",
+                "xmlhttprequest",
+                "sub_frame"
+            ]
         }
     }
 ]

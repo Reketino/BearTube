@@ -14,5 +14,12 @@
                 "sub_frame"
             ]
         }
+    },
+    {
+        "id": 2,
+        "priority": 1,
+        "action": {
+            "type":"block"
+        }
     }
 ]

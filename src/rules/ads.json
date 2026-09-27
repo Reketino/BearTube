@@ -22,7 +22,7 @@
             "type":"block"
         },
         "condition": {
-            
+            "urlFilter": "doubleclick"
         }
     }
 ]

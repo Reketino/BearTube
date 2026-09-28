@@ -20,6 +20,7 @@ export default function App() {
     settings.hideShortsNotifications,
     settings.hideShortsSearch,
     settings.hideShortsSidebar,
+    settings.blockAds,
   ].filter(Boolean).length;
 
   return (

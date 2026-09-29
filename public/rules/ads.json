@@ -23,8 +23,11 @@
         },
         "condition": {
             "urlFilter": "doubleclick",
-            "ressourceTypes": [
-                "script"
+            "resourceTypes": [
+                "script",
+                "image",
+                "xmlhttprequest",
+                "sub_frame"
             ]
         }
     }

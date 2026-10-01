@@ -15,6 +15,7 @@ async function updateAdBlocking(): Promise<void> {
     });
 
     debug("Ad blocking enabled");
+    
     return;
   }
 

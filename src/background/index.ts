@@ -37,7 +37,7 @@ async function initialize(): Promise<void> {
       return;
     }
 
-    if (!changes.blockAds) {
+    if (!changes.enabled && !changes.blockAds) {
       return;
     }
 

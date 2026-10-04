@@ -8,7 +8,7 @@ async function updateAdBlocking(): Promise<void> {
 
   const shouldBlockAds = settings.enabled && settings.blockAds;
 
-  if (settings.blockAds) {
+  if (shouldBlockAds) {
     await chrome.declarativeNetRequest.updateEnabledRulesets({
       enableRulesetIds: [RULESET_ID],
       disableRulesetIds: [],

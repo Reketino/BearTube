@@ -54,16 +54,13 @@
             "type": "block"
         },
         "condition": {
-                  "urlFilter": "googleadservices",
+     "urlFilter": "googleadservices",
       "resourceTypes": [
         "script",
         "image",
         "xmlhttprequest",
         "sub_frame"
       ]
-    }
-  },
         }
-
     }
 ]

@@ -42,5 +42,12 @@
       "urlFilter": "googleadservices",
       "resourceTypes": ["script", "image", "xmlhttprequest", "sub_frame"]
     }
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    }
   }
 ]

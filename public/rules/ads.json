@@ -48,6 +48,9 @@
     "priority": 1,
     "action": {
       "type": "block"
+    },
+    "condition": {
+      "urlFilter": "adservice.google.com"
     }
   }
 ]

@@ -50,7 +50,12 @@
       "type": "block"
     },
     "condition": {
-      "urlFilter": "adservice.google.com"
+      "urlFilter": "adservice.google.com",
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest",
+        "sub_frame"
+      ]
     }
   }
 ]

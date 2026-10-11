@@ -63,6 +63,15 @@
     "priority": 1,
     "action": {
       "type": "block"
+    },
+    "condition": {
+      "urlFilter": "pagead",
+      "resourceTypes": [
+        "script",
+        "image",
+        "xmlhttprequest",
+        "sub_frame"
+      ]
     }
   }
 ]

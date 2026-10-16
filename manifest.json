@@ -22,7 +22,8 @@
   },
   "permissions": [
     "storage",
-    "declarativeNetRequest"
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback"
   ],
   "host_permissions": ["https://www.youtube.com/*"],
   "declarative_net_request": {

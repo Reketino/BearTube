@@ -6,9 +6,7 @@ export function filterSearch() {
     return;
   }
 
-  const shelves = document.querySelectorAll<HTMLElement>(
-    "grid-shelf-view-model",
-  );
+  const shelves = document.querySelectorAll<HTMLElement>("grid-shelf-view-model");
 
   const shortsShelves = [...shelves].filter((shelf) => {
     const title = shelf

@@ -27,10 +27,10 @@ async function updateAdBlocking(): Promise<void> {
   debug("Ad blocking disabled");
 }
 
-async function initialize(): Promise<void> {
+async function initialize(): void {
   debug("🐻 BearTube background initializing");
 
-  await updateAdBlocking();
+  void updateAdBlocking();
 
   chrome.storage.onChanged.addListener(async (changes, areaName) => {
     if (areaName !== "sync") {
@@ -43,7 +43,7 @@ async function initialize(): Promise<void> {
 
     debug("Block Ads setting changed");
 
-    await updateAdBlocking();
+    void updateAdBlocking();
   });
 }
 

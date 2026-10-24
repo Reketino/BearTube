@@ -10,5 +10,5 @@ export function filterShelf() {
         const section = shelf.closest<HTMLElement>("ytd-rich-section-renderer");
 
         removeElement(section);
-    })
+    });
 }

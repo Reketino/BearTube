@@ -4,27 +4,19 @@ import { debug } from "../utils/debug";
 const RULESET_ID = "ads";
 
 async function updateAdBlocking(): Promise<void> {
+  try {
   const settings = await getSettings();
-
   const shouldBlockAds = settings.enabled && settings.blockAds;
-
-  if (shouldBlockAds) {
-    await chrome.declarativeNetRequest.updateEnabledRulesets({
-      enableRulesetIds: [RULESET_ID],
-      disableRulesetIds: [],
-    });
-
-    debug("Ad blocking enabled");
-    
-    return;
-  }
 
   await chrome.declarativeNetRequest.updateEnabledRulesets({
     enableRulesetIds: [],
     disableRulesetIds: [RULESET_ID],
   });
-
-  debug("Ad blocking disabled");
+}
+  debug(shouldBlockAds
+    ? "ad blocking enabled"
+    : "Ad blocking disabled"
+  );
 }
 
 async function initialize(): void {

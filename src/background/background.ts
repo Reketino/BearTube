@@ -12,11 +12,14 @@ async function updateAdBlocking(): Promise<void> {
     enableRulesetIds: shouldBlockAds ? [RULESET_ID] : [],
     disableRulesetIds: shouldBlockAds ? [] : [RULESET_ID],
   });
-}
+
   debug(shouldBlockAds
     ? "ad blocking enabled"
     : "Ad blocking disabled"
   );
+} catch (error) {
+  console.error("[BearTube] Failed to update ad blocking:", error);
+  }
 }
 
 async function initialize(): void {

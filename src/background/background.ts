@@ -28,18 +28,13 @@ async function initialize(): void {
   void updateAdBlocking();
 
   chrome.storage.onChanged.addListener(async (changes, areaName) => {
-    if (areaName !== "sync") {
-      return;
-    }
-
-    if (!changes.enabled && !changes.blockAds) {
-      return;
-    }
+    if (areaName !== "sync") return;
+    if (!changes.enabled && !changes.blockAds) return;
+  
 
     debug("Block Ads setting changed");
-
     void updateAdBlocking();
   });
 }
 
-void initialize();
+initialize();

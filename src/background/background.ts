@@ -22,7 +22,7 @@ async function updateAdBlocking(): Promise<void> {
   }
 }
 
-async function initialize(): void {
+function initialize(): void {
   debug("🐻 BearTube background initializing");
 
   void updateAdBlocking();
@@ -31,7 +31,6 @@ async function initialize(): void {
     if (areaName !== "sync") return;
     if (!changes.enabled && !changes.blockAds) return;
   
-
     debug("Block Ads setting changed");
     void updateAdBlocking();
   });

@@ -5,20 +5,17 @@ const RULESET_ID = "ads";
 
 async function updateAdBlocking(): Promise<void> {
   try {
-  const settings = await getSettings();
-  const shouldBlockAds = settings.enabled && settings.blockAds;
+    const settings = await getSettings();
+    const shouldBlockAds = settings.enabled && settings.blockAds;
 
-  await chrome.declarativeNetRequest.updateEnabledRulesets({
-    enableRulesetIds: shouldBlockAds ? [RULESET_ID] : [],
-    disableRulesetIds: shouldBlockAds ? [] : [RULESET_ID],
-  });
+    await chrome.declarativeNetRequest.updateEnabledRulesets({
+      enableRulesetIds: shouldBlockAds ? [RULESET_ID] : [],
+      disableRulesetIds: shouldBlockAds ? [] : [RULESET_ID],
+    });
 
-  debug(shouldBlockAds
-    ? "ad blocking enabled"
-    : "Ad blocking disabled"
-  );
-} catch (error) {
-  console.error("[BearTube] Failed to update ad blocking:", error);
+    debug(shouldBlockAds ? "ad blocking enabled" : "Ad blocking disabled");
+  } catch (error) {
+    console.error("[BearTube] Failed to update ad blocking:", error);
   }
 }
 
@@ -30,7 +27,7 @@ function initialize(): void {
   chrome.storage.onChanged.addListener(async (changes, areaName) => {
     if (areaName !== "sync") return;
     if (!changes.enabled && !changes.blockAds) return;
-  
+
     debug("Block Ads setting changed");
     void updateAdBlocking();
   });

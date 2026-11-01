@@ -4,7 +4,6 @@ import { initializeStorageListener } from "./storageListener";
 import { hasActiveFilters } from "./utils/filters";
 import { debug } from "../utils/debug";
 
-
 async function initialize() {
   debug("🐻 BearTube initializing");
 

@@ -1,0 +1,1 @@
+const STYLE_ID = "beartube-ad-filter";

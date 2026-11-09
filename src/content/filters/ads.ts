@@ -6,5 +6,5 @@ const AD_SELECTORS = [
     "ytd-promoted-sparkles-web-renderer",
     "ytd-display-ad-renderer",
     "ytd-promoted-video-renderer",
-    
+    "masthead-ad",
 ]

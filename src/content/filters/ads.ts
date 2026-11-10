@@ -7,4 +7,5 @@ const AD_SELECTORS = [
     "ytd-display-ad-renderer",
     "ytd-promoted-video-renderer",
     "masthead-ad",
-]
+    "#player-ads",
+].join(",\n");

@@ -9,3 +9,7 @@ const AD_SELECTORS = [
     "masthead-ad",
     "#player-ads",
 ].join(",\n");
+
+export function filterAds(enabled: boolean): void {
+    const existingStyles = document.getElementById(STYLE_ID);
+}

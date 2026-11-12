@@ -12,4 +12,9 @@ const AD_SELECTORS = [
 
 export function filterAds(enabled: boolean): void {
     const existingStyles = document.getElementById(STYLE_ID);
+
+    if (!enabled) {
+        existingStyles?.remove();
+        return;
+    }
 }

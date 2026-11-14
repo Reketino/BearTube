@@ -22,5 +22,5 @@ export function filterAds(enabled: boolean): void {
         return;
     }
 
-    
+    const style = document.createElement("style");
 }

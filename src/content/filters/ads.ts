@@ -23,4 +23,6 @@ export function filterAds(enabled: boolean): void {
     }
 
     const style = document.createElement("style");
+    
+    style.id = STYLE_ID
 }

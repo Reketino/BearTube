@@ -25,4 +25,9 @@ export function filterAds(enabled: boolean): void {
     const style = document.createElement("style");
     
     style.id = STYLE_ID
+    style.textContent = `
+    ${AD_SELECTORS} {
+      display: none !important;
+    }
+  `;
 }

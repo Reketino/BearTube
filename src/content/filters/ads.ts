@@ -30,4 +30,6 @@ export function filterAds(enabled: boolean): void {
       display: none !important;
     }
   `;
+
+  (document.head ?? document.documentElement).appendChild(style);
 }

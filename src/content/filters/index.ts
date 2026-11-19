@@ -3,6 +3,7 @@ import { filterNotifications } from "./notifications";
 import { filterShelf } from "./shelf";
 import { filterSearch } from "./search";
 import { filterSidebar } from "./sidebar";
+import { filterAds } from "./ads";
 
 import type { BearTubeSettings } from "../../types/settings";
 

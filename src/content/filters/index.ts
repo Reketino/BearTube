@@ -27,4 +27,6 @@ export function runFilters(settings: BearTubeSettings) {
   if (settings.hideShortsSidebar) {
     filterSidebar();
   }
+
+  filterAds(settings.blockAds);
 }

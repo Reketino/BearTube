@@ -6,6 +6,7 @@ export function hasActiveFilters(settings: BearTubeSettings): boolean {
     settings.hideShortsFeed ||
     settings.hideShortsNotifications ||
     settings.hideShortsSearch ||
-    settings.hideShortsSidebar
+    settings.hideShortsSidebar ||
+    settings.blockAds
   );
 }
